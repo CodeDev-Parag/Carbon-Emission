@@ -1,8 +1,9 @@
 import { Search, CarFront, Bus, MapPin, Gauge } from 'lucide-react';
+import CountUp from 'react-countup';
 
 export default function Transport() {
     return (
-        <div className="w-full h-full flex flex-col">
+        <div className="w-full h-full flex flex-col animate-fade-in">
             <div className="flex justify-between items-center mb-8 px-1">
                 <div className="flex items-center gap-4">
                     <div className="w-11 h-11 rounded-full bg-[#111] flex items-center justify-center text-white cursor-pointer hover:bg-gray-800 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
@@ -19,7 +20,9 @@ export default function Transport() {
                         <div className="p-2.5 bg-blue-500/20 rounded-xl text-blue-500"><CarFront className="w-6 h-6" /></div>
                         <h3 className="text-gray-300 font-medium">Campus Fleet</h3>
                     </div>
-                    <span className="text-3xl font-light mb-1">2,450 <span className="text-sm text-gray-500">kg CO₂e</span></span>
+                    <span className="text-3xl font-light mb-1">
+                        <CountUp start={0} end={2450} duration={2} separator="," /> <span className="text-sm text-gray-500">kg CO₂e</span>
+                    </span>
                     <p className="text-xs text-blue-400 mt-2">12 Active Vehicles</p>
                 </div>
 
@@ -29,7 +32,9 @@ export default function Transport() {
                         <div className="p-2.5 bg-emerald-500/20 rounded-xl text-emerald-500"><Bus className="w-6 h-6" /></div>
                         <h3 className="text-gray-300 font-medium">Student Commute</h3>
                     </div>
-                    <span className="text-3xl font-light mb-1">11,800 <span className="text-sm text-gray-500">kg CO₂e</span></span>
+                    <span className="text-3xl font-light mb-1">
+                        <CountUp start={0} end={11800} duration={2} separator="," /> <span className="text-sm text-gray-500">kg CO₂e</span>
+                    </span>
                     <p className="text-xs text-emerald-400 mt-2">15% Public Transit Adoption</p>
                 </div>
 
@@ -39,7 +44,9 @@ export default function Transport() {
                         <div className="p-2.5 bg-purple-500/20 rounded-xl text-purple-500"><MapPin className="w-6 h-6" /></div>
                         <h3 className="text-gray-300 font-medium">Logistics & Supply</h3>
                     </div>
-                    <span className="text-3xl font-light mb-1">890 <span className="text-sm text-gray-500">kg CO₂e</span></span>
+                    <span className="text-3xl font-light mb-1">
+                        <CountUp start={0} end={890} duration={2} separator="," /> <span className="text-sm text-gray-500">kg CO₂e</span>
+                    </span>
                     <p className="text-xs text-purple-400 mt-2">45 Deliveries this week</p>
                 </div>
             </div>

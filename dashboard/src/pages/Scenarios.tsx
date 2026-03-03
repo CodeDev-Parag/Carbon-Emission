@@ -2,7 +2,7 @@ import { Search, Wand2, TrendingDown } from 'lucide-react';
 
 export default function Scenarios() {
     return (
-        <div className="w-full h-full flex flex-col">
+        <div className="w-full h-full flex flex-col animate-fade-in">
             <div className="flex justify-between items-center mb-8 px-1">
                 <div className="flex items-center gap-4">
                     <div className="w-11 h-11 rounded-full bg-[#111] flex items-center justify-center text-white cursor-pointer hover:bg-gray-800 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">

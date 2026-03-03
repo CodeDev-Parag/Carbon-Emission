@@ -7,6 +7,7 @@ import {
     ArrowDownRight,
     MoreHorizontal
 } from 'lucide-react';
+import CountUp from 'react-countup';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip as ChartTooltip, Filler, Legend } from 'chart.js';
 import { Line as ChartLine, Chart } from 'react-chartjs-2';
 
@@ -31,7 +32,7 @@ const monthlyData = [
 
 export default function Overview() {
     return (
-        <div className="w-full">
+        <div className="w-full flex flex-col animate-fade-in">
             {/* Title Row */}
             <div className="flex justify-between items-center mb-8 px-1">
                 <div className="flex items-center gap-4">
@@ -65,7 +66,9 @@ export default function Overview() {
                         <div className="flex flex-wrap justify-between items-end gap-4 sm:gap-2">
                             <div>
                                 <div className="flex items-baseline gap-2">
-                                    <span className="text-3xl font-light">14.2K</span>
+                                    <span className="text-3xl font-light">
+                                        <CountUp start={0} end={14.2} duration={2} decimals={1} />K
+                                    </span>
                                     <span className="text-[#16A34A] text-xs flex items-center font-medium bg-[#16A34A]/20 px-1 py-0.5 rounded">
                                         <ArrowUpRight className="w-3 h-3 mr-0.5" /> 6.2%
                                     </span>
@@ -74,7 +77,9 @@ export default function Overview() {
                             </div>
                             <div>
                                 <div className="flex items-baseline gap-2">
-                                    <span className="text-3xl font-light">9.6K</span>
+                                    <span className="text-3xl font-light">
+                                        <CountUp start={0} end={9.6} duration={2} decimals={1} />K
+                                    </span>
                                     <span className="text-[#16A34A] text-xs flex items-center font-medium bg-[#16A34A]/20 px-1 py-0.5 rounded">
                                         <ArrowUpRight className="w-3 h-3 mr-0.5" /> 4.8%
                                     </span>
@@ -83,7 +88,9 @@ export default function Overview() {
                             </div>
                             <div>
                                 <div className="flex items-baseline gap-2">
-                                    <span className="text-3xl font-light">3.2K</span>
+                                    <span className="text-3xl font-light">
+                                        <CountUp start={0} end={3.2} duration={2} decimals={1} />K
+                                    </span>
                                     <span className="text-red-400 text-xs flex items-center font-medium bg-red-400/20 px-1 py-0.5 rounded">
                                         <ArrowDownRight className="w-3 h-3 mr-0.5" /> 0.2%
                                     </span>
@@ -101,7 +108,9 @@ export default function Overview() {
                                 <div className="bg-[#333] p-1.5 rounded-full group-hover:bg-[#444] transition-colors"><ArrowUpRight className="w-3.5 h-3.5 text-gray-300" /></div>
                             </div>
                             <div className="flex items-baseline gap-2 mt-2 z-10 relative">
-                                <span className="text-2xl font-light tracking-wide">1,209</span>
+                                <span className="text-2xl font-light tracking-wide">
+                                    <CountUp start={0} end={1209} duration={2} separator="," />
+                                </span>
                                 <span className="text-red-400 text-[10px]">-0.281</span>
                             </div>
                             {/* Mini chart */}
@@ -144,7 +153,9 @@ export default function Overview() {
                                 <div className="bg-[#333] p-1.5 rounded-full group-hover:bg-[#444] transition-colors"><ArrowDownRight className="w-3.5 h-3.5 text-gray-300" /></div>
                             </div>
                             <div className="flex items-baseline gap-2 mt-2 z-10 relative">
-                                <span className="text-2xl font-light tracking-wide">2,956</span>
+                                <span className="text-2xl font-light tracking-wide">
+                                    <CountUp start={0} end={2956} duration={2} separator="," />
+                                </span>
                                 <span className="text-[#16A34A] text-[10px]">+0.116</span>
                             </div>
                             {/* Mini chart */}

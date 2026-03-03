@@ -1,8 +1,9 @@
 import { Search, Recycle, Trash2, Leaf } from 'lucide-react';
+import CountUp from 'react-countup';
 
 export default function Waste() {
     return (
-        <div className="w-full h-full flex flex-col">
+        <div className="w-full h-full flex flex-col animate-fade-in">
             <div className="flex justify-between items-center mb-8 px-1">
                 <div className="flex items-center gap-4">
                     <div className="w-11 h-11 rounded-full bg-[#111] flex items-center justify-center text-white cursor-pointer hover:bg-gray-800 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
@@ -19,7 +20,9 @@ export default function Waste() {
                     </div>
                     <div>
                         <h3 className="text-gray-400 font-medium mb-1">Recycled/Composted</h3>
-                        <p className="text-3xl font-light">6,120 <span className="text-sm">kg</span></p>
+                        <p className="text-3xl font-light">
+                            <CountUp start={0} end={6120} duration={2} separator="," /> <span className="text-sm">kg</span>
+                        </p>
                     </div>
                 </div>
 
@@ -29,7 +32,9 @@ export default function Waste() {
                     </div>
                     <div>
                         <h3 className="text-gray-400 font-medium mb-1">Landfill Waste</h3>
-                        <p className="text-3xl font-light">5,975 <span className="text-sm">kg</span></p>
+                        <p className="text-3xl font-light">
+                            <CountUp start={0} end={5975} duration={2} separator="," /> <span className="text-sm">kg</span>
+                        </p>
                     </div>
                 </div>
             </div>

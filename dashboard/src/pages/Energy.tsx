@@ -1,4 +1,5 @@
 import { Search, Zap, BatteryCharging, Sun, Activity } from 'lucide-react';
+import CountUp from 'react-countup';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip as ChartTooltip, Filler, Legend } from 'chart.js';
 import { Line as ChartLine } from 'react-chartjs-2';
 
@@ -10,7 +11,7 @@ const energyData = [
 
 export default function Energy() {
     return (
-        <div className="w-full h-full flex flex-col">
+        <div className="w-full h-full flex flex-col animate-fade-in">
             {/* Title Row */}
             <div className="flex justify-between items-center mb-8 px-1">
                 <div className="flex items-center gap-4">
@@ -33,7 +34,9 @@ export default function Energy() {
                         </div>
                     </div>
                     <div className="flex items-baseline gap-2 mb-8 z-10">
-                        <span className="text-4xl font-light">45.2M</span>
+                        <span className="text-4xl font-light">
+                            <CountUp start={0} end={45.2} duration={2} decimals={1} />M
+                        </span>
                         <span className="text-gray-500 text-sm">kWh</span>
                     </div>
 
@@ -80,14 +83,18 @@ export default function Energy() {
                         </div>
                     </div>
                     <div className="flex items-baseline gap-2 mb-8 z-10">
-                        <span className="text-4xl font-light">12.8M</span>
+                        <span className="text-4xl font-light">
+                            <CountUp start={0} end={12.8} duration={2} decimals={1} />M
+                        </span>
                         <span className="text-gray-500 text-sm">kWh</span>
                     </div>
 
                     <div className="flex justify-between items-center mt-auto border-t border-gray-700/50 pt-4 z-10">
                         <div className="flex flex-col">
                             <span className="text-gray-500 text-[10px] uppercase">Active Panels</span>
-                            <span className="text-lg font-medium">1,204</span>
+                            <span className="text-lg font-medium">
+                                <CountUp start={0} end={1204} duration={2} separator="," />
+                            </span>
                         </div>
                         <div className="flex flex-col">
                             <span className="text-gray-500 text-[10px] uppercase">Efficiency</span>
